@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>y.web - Professional Web Design Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
+      }
+      .animate-scroll-slow {
+        animation: scroll 60s linear infinite;
+      }
+      body {
+        background-color: #050816;
+        color: #E6F1FF;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        opacity: 0;
+        animation: fadeInUp 0.7s ease-out forwards;
+      }
+      .animation-delay-200 { animation-delay: 0.2s; }
+      .animation-delay-400 { animation-delay: 0.4s; }
+      .animation-delay-600 { animation-delay: 0.6s; }
+      .animation-delay-800 { animation-delay: 0.8s; }
+      .animation-delay-1000 { animation-delay: 1s; }
+      .animation-delay-2000 { animation-delay: 2s; }
+      .animation-delay-3000 { animation-delay: 3s; }
+
+      @keyframes subtle-pulse {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.05); }
+      }
+      .animate-subtle-pulse {
+        animation: subtle-pulse 6s ease-in-out infinite;
+      }
+
+      @keyframes slow-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-slow-spin {
+        animation: slow-spin 20s linear infinite;
+      }
+      
+      @keyframes reverse-spin {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      .animate-reverse-spin {
+        animation: reverse-spin 45s linear infinite;
+      }
+
+      @keyframes border-spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-border-spin {
+        animation: border-spin 5s linear infinite;
+      }
+
+      @keyframes node-glow {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 15px 3px rgba(6, 182, 212, 0.7);
+        }
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px 8px rgba(6, 182, 212, 0.7);
+        }
+      }
+      .animate-node-glow {
+        animation: node-glow 2s ease-in-out infinite;
+      }
+      
+      @keyframes wave {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2.5);
+          opacity: 0;
+        }
+      }
+      .animate-wave {
+        animation: wave 4s ease-out infinite;
+      }
+
+      @keyframes travel-segment-h {
+        0% { left: 0; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { left: 100%; opacity: 0; }
+      }
+
+      @keyframes travel-segment-v {
+        0% { top: 0; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 100%; opacity: 0; }
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
